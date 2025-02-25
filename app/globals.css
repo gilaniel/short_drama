@@ -37,7 +37,7 @@
 }
 
 .gradient-link {
-  background: -webkit-linear-gradient(180deg, #ff0080 0%, #ffbb01 100%);
+  background: linear-gradient(90deg, #ff0080 0%, #ffbb01 100%);
   font-weight: 700;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
