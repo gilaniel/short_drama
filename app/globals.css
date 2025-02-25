@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-mono: var(--font-mono);
+}
+
+:root {
+  --background: #1a1a1a;
+  --foreground: #fff;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@layer base {
+
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.subtitle {
+  @apply font-[700] text-[18px]
+}
+
+.gradient-link {
+  background: -webkit-linear-gradient(180deg, #ff0080 0%, #ffbb01 100%);
+  font-weight: 700;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity .3s ease;
+}
+
+.gradient-link:hover {
+  opacity: 0.8;
+}
+
+ul li {
+  @apply py-1
+}
